@@ -26,7 +26,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 
 gem "devise_token_auth"
-
+group :test do
+  gem 'database_cleaner-active_record'
+end
 group :development, :test do
   gem 'pry-rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
